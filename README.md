@@ -1,7 +1,7 @@
 # fish-play
 A lightweight Fish shell wrapper for `mpv` and `yt-dlp` designed for background music playback with support for multiple platforms and local proxying.
 
-## 🇷🇺 Описание на русском
+## 🇷🇺 Описание
 **fish-play** — это легкая обертка для `mpv` и `yt-dlp` для оболочки Fish, предназначенная для фонового воспроизведения музыки с поддержкой различных платформ и локального прокси.
 
 ### Основные возможности
@@ -12,19 +12,26 @@ A lightweight Fish shell wrapper for `mpv` and `yt-dlp` designed for background 
 - **Умная обработка ссылок:** Автоматически распознает URL и воспроизводит их напрямую.
 
 ## Prerequisites / Требования
-Ensure you have the following installed:
 - [Fish Shell](https://fishshell.com/)
 - [mpv](https://mpv.io/)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - `libnotify-bin` (for `notify-send`)
 
-## Installation / Установка
+## Installation
 1. Create the function file:
    ```bash
    nano ~/.config/fish/functions/play.fish
    ```
 2. Paste the script into this file and save it.
 3. Restart your terminal (or run `source ~/.config/fish/config.fish`). The `play` command will now be available globally.
+
+## Установка
+1. Создайте файл функции:
+   ```bash
+   nano ~/.config/fish/functions/play.fish
+   ```
+2. Вставьте скрипт в этот файл и сохраните его.
+3. Перезапустите терминал (или выполните команду source ~/.config/fish/config.fish). Теперь команда play будет доступна глобально.
 
 ## Usage / Использование
 
