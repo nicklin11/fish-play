@@ -1,62 +1,54 @@
 # fish-play
-A lightweight Fish shell wrapper for `mpv` and `yt-dlp` designed for background music playback with support for multiple platforms and local proxying.
 
-## 🇷🇺 Описание
-**fish-play** — это легкая обертка для `mpv` и `yt-dlp` для оболочки Fish, предназначенная для фонового воспроизведения музыки с поддержкой различных платформ и локального прокси.
+A lightweight Fish shell wrapper for `mpv` and `yt-dlp` designed for background music playback.
+Легковесная обертка для `mpv` и `yt-dlp` для оболочки Fish, предназначенная для фонового воспроизведения музыки.
 
-### Основные возможности
-- **Фоновое воспроизведение:** Музыка продолжает играть, даже если вы закроете терминал.
-- **Поддержка платформ:** Легкое переключение между YouTube, SoundCloud (по умолчанию), VK, RuTube и Яндекс Музыкой.
-- **Поддержка прокси:** Флаг `-proxy_on` для маршрутизации трафика через ваш локальный SOCKS5 прокси (порт 2080).
-- **Уведомления:** Использует `notify-send` для вывода информации о треке.
-- **Умная обработка ссылок:** Автоматически распознает URL и воспроизводит их напрямую.
+---
 
-## Prerequisites / Требования
-- [Fish Shell](https://fishshell.com/)
-- [mpv](https://mpv.io/)
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-- `libnotify-bin` (for `notify-send`)
+## Features / Возможности
 
-## Installation
-1. Create the function file:
+*   **Background Playback:** Music continues playing even after you close the terminal. / **Фоновое воспроизведение:** Музыка продолжает играть после закрытия терминала.
+*   **Search Support:** YouTube (default) and SoundCloud. / **Поиск:** YouTube (по умолчанию) и SoundCloud.
+*   **Proxy Support:** Integrated `-proxy_on` flag to route requests through a local SOCKS5 proxy (port 2080). / **Поддержка прокси:** Флаг `-proxy_on` для маршрутизации через ваш локальный SOCKS5 прокси (порт 2080).
+*   **Smart URL Handling:** Automatically detects any URL (including VK, Yandex, RuTube) and plays them directly. / **Умная обработка ссылок:** Автоматически распознает любые URL (включая VK, Яндекс, RuTube) и воспроизводит их напрямую.
+*   **Desktop Notifications:** Uses `notify-send` for track information. / **Уведомления:** Использует `notify-send` для информации о треке.
+
+## Requirements / Требования
+
+*   [Fish Shell](https://fishshell.com/)
+*   [mpv](https://mpv.io/)
+*   [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+*   `libnotify-bin` (for desktop notifications / для уведомлений)
+
+## Installation / Установка
+
+1. Create the function file: / Создайте файл функции:
    ```bash
    nano ~/.config/fish/functions/play.fish
    ```
-2. Paste the script into this file and save it.
-3. Restart your terminal (or run `source ~/.config/fish/config.fish`). The `play` command will now be available globally.
-
-## Установка
-1. Создайте файл функции:
-   ```bash
-   nano ~/.config/fish/functions/play.fish
-   ```
-2. Вставьте скрипт в этот файл и сохраните его.
-3. Перезапустите терминал (или выполните команду `source ~/.config/fish/config.fish`). Теперь команда `play` будет доступна глобально.
+2. Paste the script into this file and save it. / Вставьте скрипт в этот файл и сохраните его.
+3. Restart your terminal. The `play` command is now available globally. / Перезапустите терминал. Теперь команда `play` доступна глобально.
 
 ## Usage / Использование
 
-Basic command / Базовый синтаксис:
 ```fish
 play [flags] <query or url>
 ```
 
 ### Flags / Флаги:
-| Flag | Platform |
+
+| Flag / Флаг | Description / Описание |
 | :--- | :--- |
-| `-sc` | SoundCloud (Default / По умолчанию) |
-| `-yt` | YouTube |
-| `-ya` | Yandex Music / Яндекс Музыка |
-| `-vk` | VKontakte / ВКонтакте |
-| `-rt` | RuTube |
+| `-yt` | YouTube (Default / По умолчанию) |
+| `-sc` | SoundCloud |
 | `-proxy_on` | Enable SOCKS5 proxy on port 2080 / Включить SOCKS5 прокси (порт 2080) |
 
 ### Examples / Примеры:
-* **Default search (SoundCloud):**
-  `play lofi hip hop`
-* **YouTube search with proxy:**
-  `play -yt -proxy_on phonk mix`
-* **Direct URL playback:**
-  `play https://music.yandex.ru/album/some-album`
-* **Mixed flags:**
-  `play -proxy_on -ya <url>`
+
+*   **Default search (YouTube):** / **Поиск по умолчанию (YouTube):**
+    `play lo-fi hip hop`
+*   **SoundCloud search with proxy:** / **Поиск в SoundCloud через прокси:**
+    `play -sc -proxy_on techno mix`
+*   **Direct URL playback:** / **Прямое воспроизведение по ссылке:**
+    `play https://music.yandex.ru/album/...`
 
