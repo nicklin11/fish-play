@@ -31,7 +31,7 @@ A lightweight Fish shell wrapper for `mpv` and `yt-dlp` designed for background 
    nano ~/.config/fish/functions/play.fish
    ```
 2. Вставьте скрипт в этот файл и сохраните его.
-3. Перезапустите терминал (или выполните команду source ~/.config/fish/config.fish). Теперь команда play будет доступна глобально.
+3. Перезапустите терминал (или выполните команду `source ~/.config/fish/config.fish`). Теперь команда `play` будет доступна глобально.
 
 ## Usage / Использование
 
