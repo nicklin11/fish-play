@@ -1,6 +1,7 @@
 # fish-play
 
 A lightweight Fish shell wrapper for `mpv` and `yt-dlp` designed for background music playback.
+
 Легковесная обертка для `mpv` и `yt-dlp` для оболочки Fish, предназначенная для фонового воспроизведения музыки.
 
 ---
